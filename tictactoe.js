@@ -7,6 +7,13 @@ a.push(["7", "8", "9"])
 
 // let gameStatus = false
 
+// Horizontal i and vertical is j 
+//   |j0|j1|j2
+// i0|__|__|___
+// i1|__|__|___
+// i2|__|__|___
+
+
 isGameOver = () => {
     if((a[0][0]) == (a[1][1]) && (a[2][2]) == (a[1][1])){
         // alert("player win")
@@ -48,10 +55,16 @@ isGameOver = () => {
         return true
         
     }
+    if((a[2][2]) == (a[1][2]) && (a[1][2]) == (a[0][2])){
+        // alert("player win")
+        return true
+        
+    }
     if(onClickCount >= 9){
         return false
 
     }
+
     
 }
 
